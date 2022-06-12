@@ -1,10 +1,9 @@
 import fastify from "fastify";
+import { routes } from "./routes";
 
 const server = fastify();
 
-server.get("/", async () => {
-  return { hello: "world" };
-});
+server.register(routes, { prefix: "/api" });
 
 server.listen(8080, (err, address) => {
   if (err) {
