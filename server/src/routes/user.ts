@@ -1,4 +1,4 @@
-import { getAllUsers } from "src/controllers/userController";
+import { getAllUsers } from "../controllers/userController";
 
 const userRoute = async (fastify: any) => {
   fastify.get("/", async () => getAllUsers());
